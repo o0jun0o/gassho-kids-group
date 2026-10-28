@@ -89,8 +89,8 @@ img {
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #F4EFE1;       /* 背景画像が届かない部分をベージュで埋める */
-  min-height: 77vw;                /* 背景画像の縦横比に合わせた高さ */
-  padding: 400px 0 80px;
+  min-height: 40vw;                /* 背景画像の縦横比に合わせた高さ */
+  padding: 600px 0 80px;
 }
 
 /* FVの縦書きタイトル */
@@ -112,6 +112,18 @@ img {
   min-width: 0;
   height: auto;
 }
+/* ===================================
+   導入エリア（テキスト中央揃え）
+=================================== */
+.intro {
+  text-align: center;
+  padding: 60px 20px; /* 上下に余白をつけて息継ぎをさせる */
+}
+
+/* 導入エリア内のボタンを中央に維持する */
+.intro .btn-contact {
+  margin: 40px auto;
+}
 
 /* ===================================
    アイコンエリアの横並び
@@ -127,6 +139,106 @@ img {
   display: flex;
   gap: 40px; /* アイコン同士の隙間 */
   text-align: center;
+}
+/* ===================================
+   アイコンエリア（四角い枠の装飾）
+=================================== */
+.icon-box {
+  border: 2px solid var(--color-brown); /* Figmaに合わせた茶色の枠線 */
+  border-radius: 12px;                  /* 角を少し丸くする */
+  padding: 30px 20px;                   /* 枠の中の余白（内側） */
+  width: 200px;                         /* 四角の幅を揃える */
+  background-color: transparent;        /* 背景は透明（ベージュを透かす） */
+}
+
+/* アイコン自体の大きさを少し調整（必要に応じて） */
+.icon-box img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px; /* アイコンと下のテキストの隙間 */
+}
+/* ===================================
+   ★追加：利用情報をFigmaに合わせる（上書き）
+=================================== */
+/* 左の「利用情報」カプセル */
+.icon-title {
+  padding: 16px 8px;
+  border: 1.5px solid var(--color-brown);
+  border-radius: 50px;
+  letter-spacing: 0.3em;
+}
+
+.icon-list {
+  gap: 20px;
+}
+
+/* 四角：小さくして角を丸く */
+.icon-box {
+  width: 180px;
+  padding: 16px 10px;
+  border-radius: 20px;
+}
+
+.icon-box p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* 四角の中の見出し */
+.icon-label {
+  font-family: var(--font-group-head);
+  margin-bottom: 10px !important;
+}
+
+/* アイコン：高さでそろえる（100pxの指定を上書き） */
+.icon-box img {
+  width: auto;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* 下のアレルギーカプセル */
+.allergy-note {
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 10px 80px;
+  border: 2px solid var(--color-brown);
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+/* ===================================
+   ★追加：導入〜利用情報の余白調整
+=================================== */
+/* 導入エリア全体の上下余白 */
+.intro {
+  padding: 120px 20px 100px;
+}
+
+/* キャッチコピーと説明文の間 */
+.catchphrase {
+  margin: 0 0 60px;
+}
+
+/* 説明文の行間 */
+.desc {
+  margin: 0;
+  line-height: 2;
+}
+
+/* 説明文とボタンの間、ボタンと利用情報の間 */
+.intro .btn-contact {
+  margin: 60px auto 120px;
+}
+
+/* 利用情報とアレルギーカプセルの間 */
+.features-icons {
+  margin: 0 0 30px;
+}
+
+/* 足跡まわりの白い部分をベージュにする */
+body {
+  background-color: var(--color-beige);
 }
 
 /* ===================================
