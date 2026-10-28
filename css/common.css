@@ -1,10 +1,24 @@
 @charset "UTF-8";
 
 :root {
-  /* サイト全体で共通して使う色 */
-  --c-base: #ECE7DA;
-  --c-main: #433632;
-  --c-green: #A6BC4A;
+  /* ===================================
+     カラー（Figmaの右パネルの色スタイル）
+  =================================== */
+  /* ※Figmaの色設定アイコンをクリックして、表示される # から始まるカラーコードを書き写してください */
+  --color-text: #333333;   /* 文字色 */
+  --color-green: #A6BC4A;  /* 緑 */
+  --color-brown: #433632;  /* 焦茶 */
+  --color-bg: #ECE7DA;     /* texture+bgなどのベース色 */
+
+  /* ===================================
+     フォントファミリー（書体）の設定
+  =================================== */
+  --font-group-body: "Zen Kaku Gothic New", sans-serif;
+  --font-group-head: "Zen Antique Soft", serif;
+  --font-group-en: "Aoboshi One", serif;
+  
+  --font-kids-body: "Zen Maru Gothic", sans-serif;
+  --font-kids-head: "Mochiy Pop P One", sans-serif;
 }
 /* コンテンツを中央に配置する共通の箱 */
 .inner {

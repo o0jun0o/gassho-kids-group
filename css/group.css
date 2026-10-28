@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+body {
+  font-family: var(--font-group-body);
+  color: var(--color-text);
+}
+
+h1, h2, h3, .title-charm, .title-menu {
+  font-family: var(--font-group-head);
+}
+
 /* ===================================
    共通変数（色）の設定
 =================================== */
