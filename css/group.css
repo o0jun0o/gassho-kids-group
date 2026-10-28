@@ -167,3 +167,58 @@ img {
   left: -5%;    /* 左からの位置（画面外に少しはみ出させることも可能） */
   width: 200px;  /* 雲の大きさ */
 }
+
+/* ===================================
+   お土産エリア
+=================================== */
+/* 上の横並びと下の3枚の間を詰める */
+.souvenir .charm-item {
+  margin-bottom: 10px;
+}
+
+/* 写真3枚を横一列に並べる */
+.souvenir-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 同じ幅で3列 */
+  gap: 10px;                             /* 写真同士の隙間 */
+}
+
+.souvenir-banners img {
+  width: 100%;
+  aspect-ratio: 4 / 3;  /* 3枚の縦横比をそろえる */
+  object-fit: cover;    /* 比率が違う写真もはみ出た部分を切ってそろえる */
+}
+/* ===================================
+   お品書きエリア（写真とテキストの横並び）
+=================================== */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu-item img {
+  width: 50%; /* 写真を半分の幅に */
+}
+.menu-item .text-box {
+  flex: 1;    /* テキストを残りの幅いっぱいに */
+}
+
+/* ===================================
+   店舗情報・アクセスエリア（情報とマップの横並び）
+=================================== */
+.access-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.access-inner .info-box,
+.access-inner .map-box {
+  flex: 1; /* 情報とマップをちょうど半分の幅ずつにする */
+}
