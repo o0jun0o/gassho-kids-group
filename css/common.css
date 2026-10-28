@@ -12,3 +12,38 @@
   margin: 0 auto;    /* 左右の余白を自動（auto）にして、箱を画面の中央に寄せる */
   padding: 0 20px;   /* スマホなどで見たとき、画面の端に文字や写真がくっつかないようにする */
 }
+
+/* ===================================
+   共通ボタン
+=================================== */
+.btn-contact {
+  display: block;
+  width: fit-content;
+  margin: 40px auto; /* 上下40px、左右中央寄せ */
+  padding: 15px 50px;
+  border: 1px solid var(--color-brown);
+  border-radius: 50px; /* カプセル型にする */
+  color: var(--color-text);
+  text-decoration: none; /* リンクの下線を消す */
+  letter-spacing: 0.1em;
+}
+/* こげ茶背景にあるボタン用（文字と線を白にする） */
+.bg-brown .btn-contact {
+  color: var(--color-text-on-brown);
+  border-color: var(--color-text-on-brown);
+}
+
+/* ===================================
+   共通：足跡のあしらい
+=================================== */
+.decor-footprints {
+  text-align: center; /* 画像を中央寄せ */
+  margin: -40px 0;    /* 上下のセクションに少し被せる（マイナスを入れるのがコツ！） */
+  position: relative; 
+  z-index: 10;        /* 背景色に隠れないように手前に出す */
+}
+
+.decor-footprints img {
+  width: 300px;       /* 足跡の大きさを指定（Figmaに合わせて数値を調整してください） */
+  height: auto;
+}

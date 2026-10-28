@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* ===================================
+   共通変数（色）の設定
+=================================== */
+:root {
+  /* Figmaのデザインデータから正確なカラーコード（#〜）を取得して書き換えてください */
+  --color-beige: #F4EFE1; 
+  --color-brown: #433632; 
+  --color-text: #333333;
+  --color-text-on-brown: #F4EFE1; /* こげ茶背景の時の文字色 */
+}
+
+/* ===================================
+   ベース設定
+=================================== */
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; /* 適切なフォントに変更してください */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* ===================================
+   背景とテクスチャ
+=================================== */
+.bg-beige {
+  background-color: var(--color-beige);
+}
+
+.bg-brown {
+  background-color: var(--color-brown);
+  color: #ffffff; /* こげ茶背景の時は文字を白に */
+}
+
+.bg-texture {
+  /* 先ほど半透明で作った正方形のテクスチャ画像へのパス */
+  background-image: url('../img/texture-bg.png'); 
+  background-repeat: repeat;
+}
+
+/* ===================================
+   縦書き設定
+=================================== */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.1em;
+}
+
+/* ===================================
+   お品書きエリア
+=================================== */
+.menu-labels {
+  display: flex;
+  gap: 15px; 
+  margin-bottom: 20px;
+}
+
+.label-pill {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--color-brown); 
+  border-radius: 50px; 
+  padding: 20px 8px; 
+}
+
+/* ===================================
+   アイコンエリアの横並び
+=================================== */
+.features-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0;
+}
+.icon-list {
+  display: flex;
+  gap: 40px; /* アイコン同士の隙間 */
+  text-align: center;
+}
+
+/* ===================================
+   魅力エリア（写真とテキスト）の横並び
+=================================== */
+.charm-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+/* 画像を右側に配置するクラス */
+.charm-item.reverse {
+  flex-direction: row-reverse;
+}
+/* テキストボックスの幅を調整 */
+.charm-item .text-box {
+  flex: 1; 
+}
+.charm-item img {
+  width: 50%; /* 画像の幅を半分にする */
+}
