@@ -13,10 +13,10 @@ h1, h2, h3, .title-charm, .title-menu {
    共通変数（色）の設定
 =================================== */
 :root {
-  /* Figmaのデザインデータから正確なカラーコード（#〜）を取得して書き換えてください */
+  
   --color-beige: #F4EFE1; 
   --color-brown: #433632; 
-  --color-text: #333333;
+  --color-text: #433632;
   --color-text-on-brown: #F4EFE1; /* こげ茶背景の時の文字色 */
 }
 
@@ -81,6 +81,39 @@ img {
 }
 
 /* ===================================
+   ファーストビュー（FV）のスタイル追加
+=================================== */
+.hero-fv {
+  background-image: url('../img/group/FV.png');
+  background-size: 100% auto;      /* 横幅に合わせ、縦は切らずに比率を保つ */
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #F4EFE1;       /* 背景画像が届かない部分をベージュで埋める */
+  min-height: 77vw;                /* 背景画像の縦横比に合わせた高さ */
+  padding: 400px 0 80px;
+}
+
+/* FVの縦書きタイトル */
+.hero-fv h1 {
+  font-size: 40px;       /* 文字の大きさ */
+  letter-spacing: 0.2em; /* 文字と文字の間隔 */
+  margin: 0;             /* h1の初期余白を消す */
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: flex-end; /* 文字と写真をまとめて右に寄せる */
+  align-items: flex-start;   /* 文字を写真の上端にそろえる */
+  gap: 40px;                 /* 文字と写真の間隔 */
+}
+
+.hero-inner img {
+  flex: 0 0 60%;   /* 写真の幅（画面の70%） */
+  min-width: 0;
+  height: auto;
+}
+
+/* ===================================
    アイコンエリアの横並び
 =================================== */
 .features-icons {
@@ -115,4 +148,22 @@ img {
 }
 .charm-item img {
   width: 50%; /* 画像の幅を半分にする */
+}
+
+/* 基準となる親要素（雲を閉じ込める箱） */
+.relative-box {
+  position: relative;
+}
+
+/* 雲をフワッと重ねる共通設定 */
+.decor-cloud {
+  position: absolute;
+  pointer-events: none; /* 雲がクリックの邪魔をしないようにする */
+}
+
+/* 雲ごとの位置調整 */
+.cloud-pos-1 {
+  top: -30px;    /* 上からの位置 */
+  left: -5%;    /* 左からの位置（画面外に少しはみ出させることも可能） */
+  width: 200px;  /* 雲の大きさ */
 }
