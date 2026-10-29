@@ -147,7 +147,7 @@ img {
   border: 2px solid var(--color-brown); /* Figmaに合わせた茶色の枠線 */
   border-radius: 12px;                  /* 角を少し丸くする */
   padding: 30px 20px;                   /* 枠の中の余白（内側） */
-  width: 200px;                         /* 四角の幅を揃える */
+  width: 250px;                         /* 四角の幅を揃える */
   background-color: transparent;        /* 背景は透明（ベージュを透かす） */
 }
 
@@ -208,7 +208,7 @@ img {
 }
 
 /* ===================================
-   ★追加：導入〜利用情報の余白調整
+   導入〜利用情報の余白調整
 =================================== */
 /* 導入エリア全体の上下余白 */
 .intro {
@@ -280,6 +280,19 @@ body {
   width: 200px;  /* 雲の大きさ */
 }
 
+/* ★追加：足跡を写真の後ろにする */
+.decor-footprints {
+  z-index: 0; /* 10 → 0 に下げる */
+}
+
+/* 写真を足跡より手前に出す */
+.charm-item img,
+.souvenir-banners img,
+.menu-item img {
+  position: relative;
+  z-index: 1;
+}
+
 /* ===================================
    お土産エリア
 =================================== */
@@ -333,4 +346,36 @@ body {
 .access-inner .info-box,
 .access-inner .map-box {
   flex: 1; /* 情報とマップをちょうど半分の幅ずつにする */
+}
+
+/* ===================================
+   ★追加：セクション見出し（縦書き中央＋英字）
+=================================== */
+.sec-title {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;   /* 横方向の中央に置く */
+  align-items: center;   /* 英字を見出しの中央にそろえる */
+  gap: 10px;                 /* 英字と見出しの間隔 */
+  padding: 80px 0 60px;      /* 見出しの上下の余白 */
+}
+
+.sec-title h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.3em;
+}
+
+/* 緑の英字（Menu / Map） */
+.title-en {
+  font-family: var(--font-group-en);
+  color: var(--color-green);
+  font-size: 14px;
+}
+
+/* フッター画像 */
+.footer-img {
+  display: block;
+  width: 100%;
+  margin-top: 60px;
 }
