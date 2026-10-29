@@ -3,65 +3,13 @@
 body {
   font-family: var(--font-group-body);
   color: var(--color-text);
+  background-color: var(--color-beige);
 }
 
 h1, h2, h3, .title-charm, .title-menu {
   font-family: var(--font-group-head);
 }
 
-/* ===================================
-   共通変数（色）の設定
-=================================== */
-:root {
-  
-  --color-beige: #F4EFE1; 
-  --color-brown: #433632; 
-  --color-text: #433632;
-  --color-text-on-brown: #F4EFE1; /* こげ茶背景の時の文字色 */
-}
-
-/* ===================================
-   ベース設定
-=================================== */
-body {
-  margin: 0;
-  padding: 0;
-  color: var(--color-text);
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; /* 適切なフォントに変更してください */
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-}
-
-/* ===================================
-   背景とテクスチャ
-=================================== */
-.bg-beige {
-  background-color: var(--color-beige);
-}
-
-.bg-brown {
-  background-color: var(--color-brown);
-  color: #ffffff; /* こげ茶背景の時は文字を白に */
-}
-
-.bg-texture {
-  /* 先ほど半透明で作った正方形のテクスチャ画像へのパス */
-  background-image: url('../img/texture-bg.png'); 
-  background-repeat: repeat;
-}
-
-/* ===================================
-   縦書き設定
-=================================== */
-.vertical-text {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  letter-spacing: 0.1em;
-}
 
 /* ===================================
    お品書きエリア
@@ -234,11 +182,6 @@ img {
 /* 利用情報とアレルギーカプセルの間 */
 .features-icons {
   margin: 0 0 30px;
-}
-
-/* 足跡まわりの白い部分をベージュにする */
-body {
-  background-color: var(--color-beige);
 }
 
 /* ===================================
