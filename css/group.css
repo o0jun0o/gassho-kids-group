@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+body {
+  font-family: var(--font-group-body);
+  color: var(--color-text);
+  background-color: var(--color-beige);
+}
+
+h1, h2, h3, .title-charm, .title-menu {
+  font-family: var(--font-group-head);
+}
+
+
+/* ===================================
+   お品書きエリア
+=================================== */
+.menu-labels {
+  display: flex;
+  gap: 15px; 
+  margin-bottom: 20px;
+}
+
+.label-pill {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--color-brown); 
+  border-radius: 50px; 
+  padding: 20px 8px; 
+}
+
+/* ===================================
+   ファーストビュー（FV）のスタイル追加
+=================================== */
+.hero-fv {
+  background-image: url('../img/group/FV.png');
+  background-size: 100% auto;      /* 横幅に合わせ、縦は切らずに比率を保つ */
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #F4EFE1;       /* 背景画像が届かない部分をベージュで埋める */
+  min-height: 40vw;                /* 背景画像の縦横比に合わせた高さ */
+  padding: 600px 0 80px;
+}
+
+/* FVの縦書きタイトル */
+.hero-fv h1 {
+  font-size: 40px;       /* 文字の大きさ */
+  letter-spacing: 0.2em; /* 文字と文字の間隔 */
+  margin: 0;             /* h1の初期余白を消す */
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: flex-end; /* 文字と写真をまとめて右に寄せる */
+  align-items: flex-start;   /* 文字を写真の上端にそろえる */
+  gap: 40px;                 /* 文字と写真の間隔 */
+}
+
+.hero-inner img {
+  flex: 0 0 60%;   /* 写真の幅（画面の70%） */
+  min-width: 0;
+  height: auto;
+}
+/* ===================================
+   導入エリア（テキスト中央揃え）
+=================================== */
+.intro {
+  text-align: center;
+  padding: 60px 20px; /* 上下に余白をつけて息継ぎをさせる */
+}
+
+/* 導入エリア内のボタンを中央に維持する */
+.intro .btn-contact {
+  margin: 40px auto;
+}
+
+/* ===================================
+   アイコンエリアの横並び
+=================================== */
+.features-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 50px 0;
+}
+.icon-list {
+  display: flex;
+  gap: 40px; /* アイコン同士の隙間 */
+  text-align: center;
+}
+/* ===================================
+   アイコンエリア（四角い枠の装飾）
+=================================== */
+.icon-box {
+  border: 2px solid var(--color-brown); /* Figmaに合わせた茶色の枠線 */
+  border-radius: 12px;                  /* 角を少し丸くする */
+  padding: 30px 20px;                   /* 枠の中の余白（内側） */
+  width: 200px;                         /* 四角の幅を揃える */
+  background-color: transparent;        /* 背景は透明（ベージュを透かす） */
+}
+
+/* アイコン自体の大きさを少し調整（必要に応じて） */
+.icon-box img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px; /* アイコンと下のテキストの隙間 */
+}
+/* ===================================
+   ★追加：利用情報をFigmaに合わせる（上書き）
+=================================== */
+/* 左の「利用情報」カプセル */
+.icon-title {
+  padding: 16px 8px;
+  border: 1.5px solid var(--color-brown);
+  border-radius: 50px;
+  letter-spacing: 0.3em;
+}
+
+.icon-list {
+  gap: 20px;
+}
+
+/* 四角：小さくして角を丸く */
+.icon-box {
+  width: 180px;
+  padding: 16px 10px;
+  border-radius: 20px;
+}
+
+.icon-box p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* 四角の中の見出し */
+.icon-label {
+  font-family: var(--font-group-head);
+  margin-bottom: 10px !important;
+}
+
+/* アイコン：高さでそろえる（100pxの指定を上書き） */
+.icon-box img {
+  width: auto;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* 下のアレルギーカプセル */
+.allergy-note {
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 10px 80px;
+  border: 2px solid var(--color-brown);
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+/* ===================================
+   ★追加：導入〜利用情報の余白調整
+=================================== */
+/* 導入エリア全体の上下余白 */
+.intro {
+  padding: 120px 20px 100px;
+}
+
+/* キャッチコピーと説明文の間 */
+.catchphrase {
+  margin: 0 0 60px;
+}
+
+/* 説明文の行間 */
+.desc {
+  margin: 0;
+  line-height: 2;
+}
+
+/* 説明文とボタンの間、ボタンと利用情報の間 */
+.intro .btn-contact {
+  margin: 60px auto 120px;
+}
+
+/* 利用情報とアレルギーカプセルの間 */
+.features-icons {
+  margin: 0 0 30px;
+}
+
+/* ===================================
+   魅力エリア（写真とテキスト）の横並び
+=================================== */
+.charm-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+/* 画像を右側に配置するクラス */
+.charm-item.reverse {
+  flex-direction: row-reverse;
+}
+/* テキストボックスの幅を調整 */
+.charm-item .text-box {
+  flex: 1; 
+}
+.charm-item img {
+  width: 50%; /* 画像の幅を半分にする */
+}
+
+/* 基準となる親要素（雲を閉じ込める箱） */
+.relative-box {
+  position: relative;
+}
+
+/* 雲をフワッと重ねる共通設定 */
+.decor-cloud {
+  position: absolute;
+  pointer-events: none; /* 雲がクリックの邪魔をしないようにする */
+}
+
+/* 雲ごとの位置調整 */
+.cloud-pos-1 {
+  top: -30px;    /* 上からの位置 */
+  left: -5%;    /* 左からの位置（画面外に少しはみ出させることも可能） */
+  width: 200px;  /* 雲の大きさ */
+}
+
+/* ===================================
+   お土産エリア
+=================================== */
+/* 上の横並びと下の3枚の間を詰める */
+.souvenir .charm-item {
+  margin-bottom: 10px;
+}
+
+/* 写真3枚を横一列に並べる */
+.souvenir-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 同じ幅で3列 */
+  gap: 10px;                             /* 写真同士の隙間 */
+}
+
+.souvenir-banners img {
+  width: 100%;
+  aspect-ratio: 4 / 3;  /* 3枚の縦横比をそろえる */
+  object-fit: cover;    /* 比率が違う写真もはみ出た部分を切ってそろえる */
+}
+/* ===================================
+   お品書きエリア（写真とテキストの横並び）
+=================================== */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu-item img {
+  width: 50%; /* 写真を半分の幅に */
+}
+.menu-item .text-box {
+  flex: 1;    /* テキストを残りの幅いっぱいに */
+}
+
+/* ===================================
+   店舗情報・アクセスエリア（情報とマップの横並び）
+=================================== */
+.access-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.access-inner .info-box,
+.access-inner .map-box {
+  flex: 1; /* 情報とマップをちょうど半分の幅ずつにする */
+}

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+:root {
+  /* ===================================
+     カラー
+  =================================== */
+  
+  --color-text: #433632;   /* 文字色 */
+  --color-green: #A6BC4A;  /* 緑 */
+  --color-brown: #433632;  /* 焦茶 */
+  --color-bg: #ECE7DA;     /* texture+bgなどのベース色 */
+  --color-text-on-brown: #F4EFE1; /* 焦茶背景上の文字色 */
+  --color-beige: #F4EFE1;
+
+  /* ===================================
+     フォントファミリー（書体）の設定
+  =================================== */
+  --font-group-body: "Zen Kaku Gothic New", sans-serif;
+  --font-group-head: "Zen Antique Soft", serif;
+  --font-group-en: "Aoboshi One", serif;
+  
+  --font-kids-body: "Zen Maru Gothic", sans-serif;
+  --font-kids-head: "Mochiy Pop P One", sans-serif;
+}
+
+/* ===================================
+   共通ベース設定
+=================================== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* ===================================
+   共通背景
+=================================== */
+.bg-beige {
+  background-color: var(--color-beige);
+}
+
+.bg-brown {
+  background-color: var(--color-brown);
+  color: var(--color-text-on-brown);
+}
+
+.bg-texture {
+  background-image: url('../img/common/texture-bg.png');
+  background-repeat: repeat;
+}
+
+/* ===================================
+   共通縦書き
+=================================== */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.1em;
+}
+/* コンテンツを中央に配置する共通の箱 */
+.inner {
+  max-width: 1000px; /* 最大の横幅（デザイン画に合わせて後で微調整できます） */
+  margin: 0 auto;    /* 左右の余白を自動（auto）にして、箱を画面の中央に寄せる */
+  padding: 0 20px;   /* スマホなどで見たとき、画面の端に文字や写真がくっつかないようにする */
+}
+
+/* ===================================
+   共通ボタン
+=================================== */
+.btn-contact {
+  display: block;
+  width: fit-content;
+  margin: 40px auto; /* 上下40px、左右中央寄せ */
+  padding: 15px 50px;
+  border: 1px solid var(--color-brown);
+  border-radius: 50px; /* カプセル型にする */
+  color: var(--color-text);
+  text-decoration: none; /* リンクの下線を消す */
+  letter-spacing: 0.1em;
+}
+/* こげ茶背景にあるボタン用（文字と線を白にする） */
+.bg-brown .btn-contact {
+  color: var(--color-text-on-brown);
+  border-color: var(--color-text-on-brown);
+}
+
+/* ===================================
+   共通：足跡のあしらい
+=================================== */
+.decor-footprints {
+  text-align: center; /* 画像を中央寄せ */
+  margin: -40px 0;    /* 上下のセクションに少し被せる */
+  position: relative; 
+  z-index: 10;        /* 背景色に隠れないように手前に出す */
+}
+
+.decor-footprints img {
+  width: 300px;       /* 足跡の大きさを指定 */
+  height: auto;
+}
