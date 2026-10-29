@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.kids-fv img {
+  display: block;
+  width: 100%;
+}
