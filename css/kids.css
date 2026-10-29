@@ -11,3 +11,189 @@ img {
   display: block;
   width: 100%;
 }
+
+/* =========================
+   全体
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body.kids {
+  background-color: #ece6d6; /* ベージュ（Figmaの色に合わせて変更） */
+  color: #4a3b2c;            /* 文字色（こげ茶） */
+  line-height: 1.8;
+}
+
+/* 中身の幅をそろえる */
+.kids-quiz,
+.kids-section,
+.kids-map {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* =========================
+   FV
+========================= */
+.kids-fv__lead {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* =========================
+   クイズ
+========================= */
+.kids-quiz__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.kids-quiz__why {
+  color: #A6BC4A; /* 緑 */
+}
+
+.quiz-block {
+  margin-bottom: 60px;
+}
+
+/* 「白川郷編」などの緑のカプセル */
+.quiz-block__title {
+  width: fit-content;
+  margin: 0 auto 24px;
+  padding: 6px 32px;
+  background-color: #A6BC4A;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 20px;
+}
+
+/* 問題リスト */
+.quiz-list {
+  list-style: none;
+  counter-reset: quiz;
+  padding: 0;
+}
+
+.quiz-list__item {
+  counter-increment: quiz;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px 24px;
+  background-color: #A6BC4A; /* 薄い緑 */
+  border-radius: 999px;
+}
+
+/* 1・2・3 の丸 */
+.quiz-list__item::before {
+  content: counter(quiz);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  color: #A6BC4A;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* 答えをみてみよう！ボタン */
+.quiz-more {
+  display: block;
+  width: fit-content;
+  margin-left: auto; /* 右寄せ */
+  padding: 8px 24px;
+  background-color: #A6BC4A;
+  color: #4a3b2c;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   セクション見出し（茶色の帯）
+========================= */
+.kids-section__title {
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 60px;
+  background-color: #5c4532;
+  color: #fff;
+  font-size: 28px;
+}
+
+/* =========================
+   写真と文章の横並び
+========================= */
+.kids-topic {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.kids-topic__text,
+.kids-topic__img {
+  width: 50%;
+}
+
+/* 左右を逆にする */
+.kids-topic--reverse {
+  flex-direction: row-reverse;
+}
+
+.kids-topic__title {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   マップ
+========================= */
+.kids-map__title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.kids-map__text {
+  margin-top: 32px;
+}
+
+/* =========================
+   ボタン
+========================= */
+.kids-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 60px;
+}
+.kids-btn {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  padding: 14px;
+  text-align: center;
+  border: 2px solid #4a3b2c;
+  border-radius: 999px;
+  color: #4a3b2c;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* =========================
+   フッター写真
+========================= */
+.kids-footer__img {
+  display: block;
+  width: 100%;
+}
