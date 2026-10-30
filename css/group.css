@@ -52,7 +52,8 @@ h1, h2, h3, .title-charm, .title-menu {
   display: flex;
   justify-content: flex-end; /* 文字と写真をまとめて右に寄せる */
   align-items: flex-start;   /* 文字を写真の上端にそろえる */
-  gap: 40px;                 /* 文字と写真の間隔 */
+  gap: 50px;    
+  line-height: 1.5;             /* 文字と写真の間隔 */
 }
 
 .hero-inner img {
@@ -232,6 +233,10 @@ h1, h2, h3, .title-charm, .title-menu {
 .menu-item .text-box {
   flex: 1;    /* テキストを残りの幅いっぱいに */
 }
+/* お品書きの見出しと写真の間隔 */
+.menu > .inner {
+  margin-bottom: 120px;
+}
 
 /* ===================================
    店舗情報・アクセスエリア（情報とマップの横並び）
@@ -241,6 +246,8 @@ h1, h2, h3, .title-charm, .title-menu {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  max-width: 1000px;
+  margin: 100px auto 0;
 }
 .access-inner .info-box,
 .access-inner .map-box {
@@ -256,7 +263,7 @@ h1, h2, h3, .title-charm, .title-menu {
   justify-content: center;   /* 横方向の中央に置く */
   align-items: center;   /* 英字を見出しの中央にそろえる */
   gap: 10px;                 /* 英字と見出しの間隔 */
-  padding: 80px 0 60px;      /* 見出しの上下の余白 */
+  padding: 80px 0 120px;      /* 見出しの上下の余白 */
 }
 
 .sec-title h2 {
@@ -277,4 +284,60 @@ h1, h2, h3, .title-charm, .title-menu {
   display: block;
   width: 100%;
   margin-top: 60px;
+}
+
+/* 合掌の願いの見出しを中央配置 */
+.charm > .inner {
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  align-items: center;
+  
+}
+
+/* お品書き・所在地の見出しを中央配置 */
+.menu > .inner,
+.access > .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 合掌の願い：見出しのサイズ・余白 */
+.title-charm {
+  font-size: 48px;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 合掌の願い：見出し下の足跡 */
+.charm .decor-footprints {
+  margin: 0;
+}
+
+.charm .decor-footprints img {
+  transform: translateX(-100px);
+}
+
+/* 合掌の願い：最初の写真と文章を足跡に重ねる */
+.charm .decor-footprints + .charm-item {
+  margin-top: -250px;
+}
+
+/* お土産：足跡に重ねる */
+.charm .decor-footprints + .souvenir {
+  margin-top: -200px;
+}
+
+/* 文章も足跡より手前に出す */
+.charm-item .text-box {
+  position: relative;
+  z-index: 1;
+}
+
+/* 導入エリア下の足跡を左へ */
+.intro + .decor-footprints img {
+  transform: translateX(-190px);
 }
