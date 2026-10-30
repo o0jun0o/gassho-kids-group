@@ -53,10 +53,6 @@ body.kids {
   margin-bottom: 40px;
 }
 
-.kids-quiz__why {
-  color: #A6BC4A; /* 緑 */
-}
-
 .quiz-block {
   margin-bottom: 60px;
 }
@@ -70,6 +66,14 @@ body.kids {
   color: #fff;
   border-radius: 999px;
   font-size: 20px;
+}
+
+.kids-quiz__title img {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* 問題リスト */
