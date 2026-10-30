@@ -20,6 +20,7 @@ html {
 }
 
 body.kids {
+  font-family: var(--font-kids-body);
   background-color: #ece6d6; /* ベージュ（Figmaの色に合わせて変更） */
   color: #4a3b2c;            /* 文字色（こげ茶） */
   line-height: 1.8;
@@ -95,6 +96,7 @@ body.kids {
 }
 
 .quiz-list__item {
+  color: #ece6d6;
   counter-increment: quiz;
   display: flex;
   align-items: center;
@@ -102,7 +104,8 @@ body.kids {
   width: 75%;
   min-height: 80px;
   box-sizing: border-box;
-
+  font-size: 20px;
+  font-weight: 700;
   margin: 0 auto 18px;
   padding: 10px 20px;
 
@@ -118,11 +121,14 @@ body.kids {
   place-items: center;
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  background-color: #ece6d6;
   color: #A6BC4A;
   border-radius: 50%;
-  font-size: 26px;
+  font-size: 35px;
   font-weight: bold;
+  line-height: 1;
+  padding-bottom: 4px;
+box-sizing: border-box;
 }
 
 
@@ -172,9 +178,13 @@ body.kids {
   margin-bottom: 80px;
 }
 
-.kids-topic__text,
+.kids-topic__text{
+flex: 1;
+min-width: 0;
+}
 .kids-topic__img {
-  width: 50%;
+  width: 55%;
+  flex-shrink: 0;
 }
 
 /* 左右を逆にする */
@@ -183,21 +193,40 @@ body.kids {
 }
 
 .kids-topic__title {
-  font-size: 26px;
+  font-family: var(--font-kids-body);
+  font-weight: 700;
+  font-size: 40px;
   margin-bottom: 16px;
+}
+
+.kids-topic__text p {
+  font-size: 18px;
+  font-family: var(--font-kids-body);
+  font-weight: 600;
+  line-height: 1.8;
 }
 
 /* =========================
    マップ
 ========================= */
 .kids-map__title {
+  font-family: var(--font-kids-head);
   text-align: center;
-  font-size: 32px;
+  letter-spacing: 0.1em;
+  font-size: 50px;
+  font-weight: 400;
   margin-bottom: 40px;
 }
 
 .kids-map__text {
-  margin-top: 32px;
+ font-family: var(--font-kids-body);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+
+  max-width: 750px;
+  margin: 32px auto 0;
+  text-align: center;
 }
 
 /* =========================
@@ -357,13 +386,15 @@ body.kids {
 
 /* 答えボタンの虫眼鏡 */
 /* 答えをみてみよう！ボタン */
-/* 答えをみてみよう！ボタン */
+
 .quiz-more {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content: flex-start;
+  padding-left: 200px;
+  font-size: 24px;  
+  font-weight: 700;
   box-sizing: border-box;
   width: 500px;
   height: 80px;
