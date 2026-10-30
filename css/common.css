@@ -5,10 +5,12 @@
      カラー
   =================================== */
   
-  --color-text: #333333;   /* 文字色 */
+  --color-text: #433632;   /* 文字色 */
   --color-green: #A6BC4A;  /* 緑 */
   --color-brown: #433632;  /* 焦茶 */
   --color-bg: #ECE7DA;     /* texture+bgなどのベース色 */
+  --color-text-on-brown: #F4EFE1; /* 焦茶背景上の文字色 */
+  --color-beige: #F4EFE1;
 
   /* ===================================
      フォントファミリー（書体）の設定
@@ -19,6 +21,46 @@
   
   --font-kids-body: "Zen Maru Gothic", sans-serif;
   --font-kids-head: "Mochiy Pop P One", sans-serif;
+}
+
+/* ===================================
+   共通ベース設定
+=================================== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* ===================================
+   共通背景
+=================================== */
+.bg-beige {
+  background-color: var(--color-beige);
+}
+
+.bg-brown {
+  background-color: var(--color-brown);
+  color: var(--color-text-on-brown);
+}
+
+.bg-texture {
+  background-image: url('../img/common/texture-bg.png');
+  background-repeat: repeat;
+}
+
+/* ===================================
+   共通縦書き
+=================================== */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.1em;
 }
 /* コンテンツを中央に配置する共通の箱 */
 .inner {
