@@ -96,7 +96,7 @@ img {
   text-align: center; /* 画像を中央寄せ */
   margin: -40px 0;    /* 上下のセクションに少し被せる */
   position: relative; 
-  z-index: 10;        /* 背景色に隠れないように手前に出す */
+  z-index: 0;        /* 背景色に隠れないように手前に出す */
 }
 
 .decor-footprints img {

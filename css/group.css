@@ -65,12 +65,12 @@ h1, h2, h3, .title-charm, .title-menu {
 =================================== */
 .intro {
   text-align: center;
-  padding: 60px 20px; /* 上下に余白をつけて息継ぎをさせる */
+  padding: 120px 20px 100px; /* 上下に余白をつけて息継ぎをさせる */
 }
 
 /* 導入エリア内のボタンを中央に維持する */
 .intro .btn-contact {
-  margin: 40px auto;
+  margin: 60px auto 120px;
 }
 
 /* ===================================
@@ -81,11 +81,11 @@ h1, h2, h3, .title-charm, .title-menu {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin: 50px 0;
+  margin: 0 0 30px;
 }
 .icon-list {
   display: flex;
-  gap: 40px; /* アイコン同士の隙間 */
+  gap: 20px; /* アイコン同士の隙間 */
   text-align: center;
 }
 /* ===================================
@@ -93,20 +93,20 @@ h1, h2, h3, .title-charm, .title-menu {
 =================================== */
 .icon-box {
   border: 2px solid var(--color-brown); /* Figmaに合わせた茶色の枠線 */
-  border-radius: 12px;                  /* 角を少し丸くする */
-  padding: 30px 20px;                   /* 枠の中の余白（内側） */
-  width: 250px;                         /* 四角の幅を揃える */
+  border-radius: 20px;                  /* 角を少し丸くする */
+  padding: 16px 10px;                   /* 枠の中の余白（内側） */
+  width: 180px;                         /* 四角の幅を揃える */
   background-color: transparent;        /* 背景は透明（ベージュを透かす） */
 }
 
-/* アイコン自体の大きさを少し調整（必要に応じて） */
+/* アイコン自体の大きさ */
 .icon-box img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 15px; /* アイコンと下のテキストの隙間 */
+  width: auto;
+  height: 60px; /* 高さを60pxに統一 */
+  margin-bottom: 10px; /* アイコンと下のテキストの隙間 */
 }
 /* ===================================
-   ★追加：利用情報をFigmaに合わせる（上書き）
+   利用情報
 =================================== */
 /* 左の「利用情報」カプセル */
 .icon-title {
@@ -116,10 +116,6 @@ h1, h2, h3, .title-charm, .title-menu {
   letter-spacing: 0.3em;
 }
 
-.icon-list {
-  gap: 20px;
-}
-
 /* 四角：小さくして角を丸く */
 .icon-box {
   width: 180px;
@@ -127,21 +123,9 @@ h1, h2, h3, .title-charm, .title-menu {
   border-radius: 20px;
 }
 
-.icon-box p {
-  margin: 0;
-  font-size: 13px;
-}
-
 /* 四角の中の見出し */
 .icon-label {
   font-family: var(--font-group-head);
-  margin-bottom: 10px !important;
-}
-
-/* アイコン：高さでそろえる（100pxの指定を上書き） */
-.icon-box img {
-  width: auto;
-  height: 60px;
   margin-bottom: 10px;
 }
 
@@ -155,14 +139,6 @@ h1, h2, h3, .title-charm, .title-menu {
   font-size: 14px;
 }
 
-/* ===================================
-   導入〜利用情報の余白調整
-=================================== */
-/* 導入エリア全体の上下余白 */
-.intro {
-  padding: 120px 20px 100px;
-}
-
 /* キャッチコピーと説明文の間 */
 .catchphrase {
   margin: 0 0 60px;
@@ -172,16 +148,6 @@ h1, h2, h3, .title-charm, .title-menu {
 .desc {
   margin: 0;
   line-height: 2;
-}
-
-/* 説明文とボタンの間、ボタンと利用情報の間 */
-.intro .btn-contact {
-  margin: 60px auto 120px;
-}
-
-/* 利用情報とアレルギーカプセルの間 */
-.features-icons {
-  margin: 0 0 30px;
 }
 
 /* ===================================
@@ -223,11 +189,6 @@ h1, h2, h3, .title-charm, .title-menu {
   width: 200px;  /* 雲の大きさ */
 }
 
-/* ★追加：足跡を写真の後ろにする */
-.decor-footprints {
-  z-index: 0; /* 10 → 0 に下げる */
-}
-
 /* 写真を足跡より手前に出す */
 .charm-item img,
 .souvenir-banners img,
@@ -264,9 +225,6 @@ h1, h2, h3, .title-charm, .title-menu {
   align-items: center;
   gap: 40px;
   margin-bottom: 60px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .menu-item img {
   width: 50%; /* 写真を半分の幅に */
@@ -283,8 +241,6 @@ h1, h2, h3, .title-charm, .title-menu {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 .access-inner .info-box,
 .access-inner .map-box {
@@ -292,7 +248,7 @@ h1, h2, h3, .title-charm, .title-menu {
 }
 
 /* ===================================
-   ★追加：セクション見出し（縦書き中央＋英字）
+  セクション見出し（縦書き中央＋英字）
 =================================== */
 .sec-title {
   display: flex;
