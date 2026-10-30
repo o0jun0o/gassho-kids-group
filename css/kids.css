@@ -244,3 +244,53 @@ body.kids {
   -webkit-mask: url("../img/kids/mask-cloud-06.svg") center / 100% 100% no-repeat;
   mask: url("../img/kids/mask-cloud-06.svg") center / 100% 100% no-repeat;
 }
+
+/* =========================
+   白川郷：見出しと装飾
+========================= */
+
+#about .kids-section-heading {
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 36px;
+}
+
+/* 上側がゆるくカーブした茶色の帯 */
+#about .kids-section__title {
+  margin: 0;
+  padding: 24px 100px 18px;
+  background-color: var(--color-brown);
+  color: var(--color-text-on-brown);
+  border-radius: 50% 50% 0 0 / 24px 24px 0 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* 装飾の共通設定 */
+#about .kids-heading-deco {
+  position: absolute;
+  display: block;
+  height: auto;
+  pointer-events: none;
+}
+
+/* 左の木 */
+#about .kids-heading-deco--tree-left {
+  width: 50px;
+  left: 16px;
+  bottom: 12px;
+}
+
+/* 左の家 */
+#about .kids-heading-deco--house {
+  width: 65px;
+  left: 80px;
+  bottom: 28px;
+}
+
+/* 右の木 */
+#about .kids-heading-deco--tree-right {
+  width: 65px;
+  right: 20px;
+  bottom: 12px;
+}
