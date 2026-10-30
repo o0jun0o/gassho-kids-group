@@ -339,3 +339,17 @@ body.kids {
   right: 4%;
   bottom: 105px;
 }
+
+/* すったて：左の鍋 */
+#suttate .kids-heading-deco--pot {
+  width: 220px;
+  left: 6%;
+  bottom: 70px;
+}
+
+/* すったて：右の大豆 */
+#suttate .kids-heading-deco--soybean {
+  width: 160px;
+  right: 16%;
+  bottom: -80px;
+}
