@@ -27,11 +27,22 @@ body.kids {
 
 /* 中身の幅をそろえる */
 .kids-quiz,
-.kids-section,
 .kids-map {
   max-width: 1000px;
   margin: 0 auto;
   padding: 80px 20px;
+}
+/* セクションは画面幅いっぱい */
+.kids-section {
+  padding: 0 0 60px;
+}
+
+/* 写真と文章だけ中央に収める */
+.kids-section__inner {
+  box-sizing: border-box;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* =========================
@@ -125,11 +136,16 @@ body.kids {
    セクション見出し（茶色の帯）
 ========================= */
 .kids-section__title {
+  box-sizing: border-box;
+  min-height: 180px;
+  margin: 0 0 60px;
+  padding: 70px 100px 30px;
+
+  background-color: var(--color-brown);
+  color: var(--color-text-on-brown);
+
+  border-radius: 50% 50% 0 0 / 72px 72px 0 0;
   text-align: center;
-  padding: 16px;
-  margin-bottom: 60px;
-  background-color: #5c4532;
-  color: #fff;
   font-size: 28px;
 }
 
@@ -255,15 +271,10 @@ body.kids {
   padding-top: 36px;
 }
 
+
 /* 上側がゆるくカーブした茶色の帯 */
 #about .kids-section__title {
   margin: 0;
-  padding: 24px 100px 18px;
-  background-color: var(--color-brown);
-  color: var(--color-text-on-brown);
-  border-radius: 50% 50% 0 0 / 24px 24px 0 0;
-  text-align: center;
-  font-size: 28px;
 }
 
 /* 装飾の共通設定 */
@@ -293,4 +304,32 @@ body.kids {
   width: 65px;
   right: 20px;
   bottom: 12px;
+}
+
+/* 合掌造り：見出しと家の装飾 */
+#gassho .kids-section-heading {
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 36px;
+}
+
+#gassho .kids-section__title {
+  margin: 0;
+}
+
+#gassho .kids-heading-deco {
+  position: absolute;
+  display: block;
+  height: auto;
+  pointer-events: none;
+}
+
+#gassho .kids-heading-deco--house {
+  width: 100px;
+  left: 10%;
+  bottom: 110px;
+}
+/* 白川郷の最後の写真・文章の下余白をなくす */
+#about .kids-topic:last-child {
+  margin-bottom: 0;
 }
