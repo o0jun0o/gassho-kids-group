@@ -1,0 +1,408 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.kids-fv img {
+  display: block;
+  width: 100%;
+}
+
+/* =========================
+   全体
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body.kids {
+  background-color: #ece6d6; /* ベージュ（Figmaの色に合わせて変更） */
+  color: #4a3b2c;            /* 文字色（こげ茶） */
+  line-height: 1.8;
+}
+
+/* 中身の幅をそろえる */
+.kids-quiz,
+.kids-map {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+/* セクションは画面幅いっぱい */
+.kids-section {
+  padding: 0 0 60px;
+}
+
+/* 写真と文章だけ中央に収める */
+.kids-section__inner {
+  box-sizing: border-box;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   FV
+========================= */
+.kids-fv__lead {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* =========================
+   クイズ
+========================= */
+.kids-quiz__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.quiz-block {
+  margin-bottom: 100px;
+}
+
+/* 「白川郷編」などの緑のカプセル */
+.quiz-block__title {
+  width: fit-content;
+  margin: 0 auto 24px;
+  padding: 6px 32px;
+  background-color: #A6BC4A;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 20px;
+}
+
+.kids-quiz__title img {
+  display: block;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* 問題リスト */
+.quiz-list {
+  list-style: none;
+  counter-reset: quiz;
+  padding: 0;
+}
+
+.quiz-list__item {
+  counter-increment: quiz;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 75%;
+  min-height: 80px;
+  box-sizing: border-box;
+
+  margin: 0 auto 18px;
+  padding: 10px 20px;
+
+  background-color: #A6BC4A;
+  border-radius: 999px;
+}
+
+/* 1・2・3 の丸 */
+.quiz-list__item::before {
+  content: counter(quiz);
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #A6BC4A;
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   セクション見出し（茶色の帯）
+========================= */
+.kids-section__title {
+  box-sizing: border-box;
+  min-height: 180px;
+  margin: 0 0 60px;
+  padding: 70px 100px 30px;
+
+  background-color: var(--color-brown);
+  color: var(--color-text-on-brown);
+
+  border-radius: 50% 50% 0 0 / 72px 72px 0 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* 見出しと装飾をまとめる箱（全セクション共通） */
+.kids-section-heading {
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 36px;
+}
+
+.kids-section-heading .kids-section__title {
+  margin: 0;
+}
+
+/* 装飾の共通設定 */
+.kids-heading-deco {
+  position: absolute;
+  display: block;
+  height: auto;
+  pointer-events: none;
+}
+
+/* =========================
+   写真と文章の横並び
+========================= */
+.kids-topic {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.kids-topic__text,
+.kids-topic__img {
+  width: 50%;
+}
+
+/* 左右を逆にする */
+.kids-topic--reverse {
+  flex-direction: row-reverse;
+}
+
+.kids-topic__title {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   マップ
+========================= */
+.kids-map__title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.kids-map__text {
+  margin-top: 32px;
+}
+
+/* =========================
+   ボタン
+========================= */
+.kids-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 60px;
+}
+.kids-btn {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  padding: 14px;
+  text-align: center;
+  border: 2px solid #4a3b2c;
+  border-radius: 999px;
+  color: #4a3b2c;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* =========================
+   フッター写真
+========================= */
+.kids-footer__img {
+  display: block;
+  width: 100%;
+}
+
+/* =========================
+   写真の雲型マスク
+========================= */
+
+.mask-cloud-01 {
+  -webkit-mask: url("../img/kids/mask-cloud-01.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-01.svg") center / 100% 100% no-repeat;
+   /* 写真の表示範囲：高さは仮 */
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.mask-cloud-02 {
+  -webkit-mask: url("../img/kids/mask-cloud-02.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-02.svg") center / 100% 100% no-repeat;
+}
+
+.mask-cloud-03 {
+  -webkit-mask: url("../img/kids/mask-cloud-03.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-03.svg") center / 100% 100% no-repeat;
+}
+
+.mask-cloud-04 {
+  -webkit-mask: url("../img/kids/mask-cloud-04.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-04.svg") center / 100% 100% no-repeat;
+  /* 写真の表示範囲：高さは仮 */
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 23%;
+}
+
+
+.mask-cloud-05 {
+  -webkit-mask: url("../img/kids/mask-cloud-05.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-05.svg") center / 100% 100% no-repeat;
+}
+
+.mask-cloud-06 {
+  -webkit-mask: url("../img/kids/mask-cloud-06.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-06.svg") center / 100% 100% no-repeat;
+}
+
+/* =========================
+   白川郷：見出しと装飾
+========================= */
+
+
+
+/* 左の木 */
+#about .kids-heading-deco--tree-left {
+  width: 80px;
+  left: 30px;
+  bottom: 50px;
+}
+
+/* 左の家 */
+#about .kids-heading-deco--house {
+  width: 130px;
+  left: 150px;
+  bottom: 100px;
+}
+
+/* 右の木 */
+#about .kids-heading-deco--tree-right {
+  width: 110px;
+  right: 20px;
+  bottom: 12px;
+}
+
+/* 白川郷：右側の小さい木 */
+#about .kids-heading-deco--tree-right-small {
+  width: 65px;
+  right: 170px;
+  bottom: 70px;
+}
+
+/* 合掌造り：見出しと家の装飾 */
+
+#gassho .kids-heading-deco--house {
+  width: 100px;
+  left: 10%;
+  bottom: 110px;
+}
+/* 白川郷の最後の写真・文章の下余白をなくす */
+#about .kids-topic:last-child {
+  margin-bottom: 0;
+}
+
+/* 合掌造り：左の家 */
+#gassho .kids-heading-deco--house {
+  width: 140px;
+  left: 9%;
+  bottom: 110px;
+}
+
+/* 合掌造り：左下の小さい家 */
+#gassho .kids-heading-deco--house-small {
+  width: 90px;
+  left: 3%;
+  bottom: 35px;
+}
+
+/* 合掌造り：右の家 */
+#gassho .kids-heading-deco--house-right {
+  width: 150px;
+  right: 4%;
+  bottom: 105px;
+}
+
+/* すったて：左の鍋 */
+#suttate .kids-heading-deco--pot {
+  width: 220px;
+  left: 6%;
+  bottom: 70px;
+}
+
+/* すったて：右の大豆 */
+#suttate .kids-heading-deco--soybean {
+  width: 200px;
+  right: 16%;
+  bottom: -100px;
+}
+
+/* 答えボタンの虫眼鏡 */
+/* 答えをみてみよう！ボタン */
+/* 答えをみてみよう！ボタン */
+.quiz-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 500px;
+  height: 80px;
+
+  margin: 50px 0 0 auto;
+  margin-right: calc(50% - 50vw);
+  padding: 8px 20px 8px 45px;
+
+  background-color: var(--color-brown);
+  color: #fff;
+  border-radius: 999px 0 0 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 虫眼鏡の位置 */
+/* 虫眼鏡のサイズ・位置調整 */
+.quiz-more__icon {
+  position: absolute;
+  display: block;
+
+  width: 70px;
+  height: 70px;
+  max-width: none;
+  object-fit: contain;
+
+  left: -20px;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+
+
+/* すったて鍋からエリアマップへ続く足跡 */
+.kids-deco-footprints {
+  display: block;
+  width: 500px;
+  height: auto;
+
+  margin: 0 -10% 0 auto;
+  transform: rotate(-15deg);
+}
