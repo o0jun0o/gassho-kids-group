@@ -201,3 +201,46 @@ body.kids {
   display: block;
   width: 100%;
 }
+
+/* =========================
+   写真の雲型マスク
+========================= */
+
+.mask-cloud-01 {
+  -webkit-mask: url("../img/kids/mask-cloud-01.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-01.svg") center / 100% 100% no-repeat;
+   /* 写真の表示範囲：高さは仮 */
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.mask-cloud-02 {
+  -webkit-mask: url("../img/kids/mask-cloud-02.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-02.svg") center / 100% 100% no-repeat;
+}
+
+.mask-cloud-03 {
+  -webkit-mask: url("../img/kids/mask-cloud-03.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-03.svg") center / 100% 100% no-repeat;
+}
+
+.mask-cloud-04 {
+  -webkit-mask: url("../img/kids/mask-cloud-04.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-04.svg") center / 100% 100% no-repeat;
+  /* 写真の表示範囲：高さは仮 */
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 23%;
+}
+
+
+.mask-cloud-05 {
+  -webkit-mask: url("../img/kids/mask-cloud-05.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-05.svg") center / 100% 100% no-repeat;
+}
+
+.mask-cloud-06 {
+  -webkit-mask: url("../img/kids/mask-cloud-06.svg") center / 100% 100% no-repeat;
+  mask: url("../img/kids/mask-cloud-06.svg") center / 100% 100% no-repeat;
+}
