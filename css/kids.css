@@ -65,7 +65,7 @@ body.kids {
 }
 
 .quiz-block {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 /* 「白川郷編」などの緑のカプセル */
@@ -99,9 +99,14 @@ body.kids {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 16px;
-  padding: 12px 24px;
-  background-color: #A6BC4A; /* 薄い緑 */
+  width: 75%;
+  min-height: 80px;
+  box-sizing: border-box;
+
+  margin: 0 auto 18px;
+  padding: 10px 20px;
+
+  background-color: #A6BC4A;
   border-radius: 999px;
 }
 
@@ -111,26 +116,15 @@ body.kids {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   background-color: #fff;
   color: #A6BC4A;
   border-radius: 50%;
+  font-size: 26px;
   font-weight: bold;
 }
 
-/* 答えをみてみよう！ボタン */
-.quiz-more {
-  display: block;
-  width: fit-content;
-  margin-left: auto; /* 右寄せ */
-  padding: 8px 24px;
-  background-color: #A6BC4A;
-  color: #4a3b2c;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: bold;
-}
 
 /* =========================
    セクション見出し（茶色の帯）
@@ -288,23 +282,30 @@ body.kids {
 
 /* 左の木 */
 #about .kids-heading-deco--tree-left {
-  width: 50px;
-  left: 16px;
-  bottom: 12px;
+  width: 80px;
+  left: 30px;
+  bottom: 50px;
 }
 
 /* 左の家 */
 #about .kids-heading-deco--house {
-  width: 65px;
-  left: 80px;
-  bottom: 28px;
+  width: 130px;
+  left: 150px;
+  bottom: 100px;
 }
 
 /* 右の木 */
 #about .kids-heading-deco--tree-right {
-  width: 65px;
+  width: 110px;
   right: 20px;
   bottom: 12px;
+}
+
+/* 白川郷：右側の小さい木 */
+#about .kids-heading-deco--tree-right-small {
+  width: 65px;
+  right: 170px;
+  bottom: 70px;
 }
 
 /* 合掌造り：見出しと家の装飾 */
@@ -349,7 +350,59 @@ body.kids {
 
 /* すったて：右の大豆 */
 #suttate .kids-heading-deco--soybean {
-  width: 160px;
+  width: 200px;
   right: 16%;
-  bottom: -80px;
+  bottom: -100px;
+}
+
+/* 答えボタンの虫眼鏡 */
+/* 答えをみてみよう！ボタン */
+/* 答えをみてみよう！ボタン */
+.quiz-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 500px;
+  height: 80px;
+
+  margin: 50px 0 0 auto;
+  margin-right: calc(50% - 50vw);
+  padding: 8px 20px 8px 45px;
+
+  background-color: var(--color-brown);
+  color: #fff;
+  border-radius: 999px 0 0 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 虫眼鏡の位置 */
+/* 虫眼鏡のサイズ・位置調整 */
+.quiz-more__icon {
+  position: absolute;
+  display: block;
+
+  width: 70px;
+  height: 70px;
+  max-width: none;
+  object-fit: contain;
+
+  left: -20px;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+
+
+/* すったて鍋からエリアマップへ続く足跡 */
+.kids-deco-footprints {
+  display: block;
+  width: 500px;
+  height: auto;
+
+  margin: 0 -10% 0 auto;
+  transform: rotate(-15deg);
 }
