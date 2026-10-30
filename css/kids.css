@@ -149,6 +149,25 @@ body.kids {
   font-size: 28px;
 }
 
+/* 見出しと装飾をまとめる箱（全セクション共通） */
+.kids-section-heading {
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 36px;
+}
+
+.kids-section-heading .kids-section__title {
+  margin: 0;
+}
+
+/* 装飾の共通設定 */
+.kids-heading-deco {
+  position: absolute;
+  display: block;
+  height: auto;
+  pointer-events: none;
+}
+
 /* =========================
    写真と文章の横並び
 ========================= */
@@ -265,25 +284,7 @@ body.kids {
    白川郷：見出しと装飾
 ========================= */
 
-#about .kids-section-heading {
-  position: relative;
-  margin-bottom: 60px;
-  padding-top: 36px;
-}
 
-
-/* 上側がゆるくカーブした茶色の帯 */
-#about .kids-section__title {
-  margin: 0;
-}
-
-/* 装飾の共通設定 */
-#about .kids-heading-deco {
-  position: absolute;
-  display: block;
-  height: auto;
-  pointer-events: none;
-}
 
 /* 左の木 */
 #about .kids-heading-deco--tree-left {
@@ -307,22 +308,6 @@ body.kids {
 }
 
 /* 合掌造り：見出しと家の装飾 */
-#gassho .kids-section-heading {
-  position: relative;
-  margin-bottom: 60px;
-  padding-top: 36px;
-}
-
-#gassho .kids-section__title {
-  margin: 0;
-}
-
-#gassho .kids-heading-deco {
-  position: absolute;
-  display: block;
-  height: auto;
-  pointer-events: none;
-}
 
 #gassho .kids-heading-deco--house {
   width: 100px;
@@ -332,4 +317,25 @@ body.kids {
 /* 白川郷の最後の写真・文章の下余白をなくす */
 #about .kids-topic:last-child {
   margin-bottom: 0;
+}
+
+/* 合掌造り：左の家 */
+#gassho .kids-heading-deco--house {
+  width: 140px;
+  left: 9%;
+  bottom: 110px;
+}
+
+/* 合掌造り：左下の小さい家 */
+#gassho .kids-heading-deco--house-small {
+  width: 90px;
+  left: 3%;
+  bottom: 35px;
+}
+
+/* 合掌造り：右の家 */
+#gassho .kids-heading-deco--house-right {
+  width: 150px;
+  right: 4%;
+  bottom: 105px;
 }
