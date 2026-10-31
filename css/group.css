@@ -11,9 +11,17 @@ h1, h2, h3, .title-charm, .title-menu {
 }
 
 
-/* ===================================
-   お品書きエリア
-=================================== */
+
+
+/* すったてコース：右側の調整 */
+.menu-item:not(.bg-brown) .text-box {
+  flex: 1;
+  min-width: 0;
+  padding-left: 30px;
+  padding-right: 6%;
+}
+
+
 .menu-labels {
   display: flex;
   gap: 15px; 
